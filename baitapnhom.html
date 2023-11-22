@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng giá trị đối số </title>
+    <script>
+        function numBer1(value) {
+            if (typeof value === 'number') {
+                return value + 1;
+            } else {
+                alert('Vui lòng nhập số.');
+                return value;
+            }
+        }
+        function buttonClick() {
+            let inputValue = document.getElementById('inputNumber').value;
+            let numericValue = parseFloat(inputValue);
+            let result = numBer1(numericValue);
+            document.getElementById('result').innerText = 'Kết quả: ' + result;
+        }
+    </script>
+</head>
+<body>
+<label for="inputNumber">Nhập số:</label>
+<input type="text" id="inputNumber" placeholder="Nhập số">
+<button onclick="buttonClick()">Tăng giá trị</button>
+<p id="result"></p>
+</body>
+</html>
